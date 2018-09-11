@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="5dp"
+        app:cardBackgroundColor="#f7f7f7"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/writeProfile"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/writeid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/writeProfile"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/writedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/writeProfile"
+                android:layout_below="@id/writeid"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/writecontent"
+                android:layout_below="@id/writedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/writeImg"
+                android:layout_below="@id/writecontent"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+
+            <TableLayout
+                android:id="@+id/table1"
+                android:layout_below="@id/writeImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:stretchColumns="*">
+
+                <TableRow>
+                    <ImageButton
+                        android:id="@+id/favoriteBtn"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="#f7f7f7"
+                        android:src="@drawable/favorite"/>
+                    <TextView
+                        android:id="@+id/favoriteC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageButton
+                        android:id="@+id/commentBtn"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="#f7f7f7"
+                        android:src="@drawable/comment"/>
+                    <TextView
+                        android:id="@+id/commentC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageButton
+                        android:id="@+id/shareBtn"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="#f7f7f7"
+                        android:src="@drawable/share"/>
+                    <TextView
+                        android:id="@+id/shareTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="공유하기"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/contentType"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:background="@drawable/btn_stroke_gray"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

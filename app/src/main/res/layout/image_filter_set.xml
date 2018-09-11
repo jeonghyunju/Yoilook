@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyunjujung.yoil.ImageFilterSet">
+
+    <TextView
+        android:id="@+id/image_filter_set_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="프로필 사진"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:onClick="changeFilterDone"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="완료"
+        android:textColor="#4d30a5"
+        android:textStyle="bold"
+        android:background="@null"/>
+
+    <Button
+        android:id="@+id/cancelFilter"
+        android:onClick="changeFilterDone"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="취소"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        android:background="@null"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/image_filter_set_title"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:id="@+id/set_change_filter_Iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/view"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/set_change_filter_Iv"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/filter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:padding="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="FILTER"
+        android:gravity="center"/>
+
+    <GridLayout
+        android:columnCount="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_title"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/original_image"
+            android:onClick="changeImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/first_filter_image"
+            android:onClick="changeImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/second_filter_image"
+            android:onClick="changeImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/third_filter_image"
+            android:onClick="changeImage"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원본 이미지"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="첫번째 필터"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="두번째 필터"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세번째 필터"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+    </GridLayout>
+</RelativeLayout>

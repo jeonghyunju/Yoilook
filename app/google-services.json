@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "813944757861",
+    "firebase_url": "https://yoil-project-1507798384062.firebaseio.com",
+    "project_id": "yoil-project-1507798384062",
+    "storage_bucket": "yoil-project-1507798384062.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813944757861:android:576602e93a534fad",
+        "android_client_info": {
+          "package_name": "com.example.hyunjujung.yoil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813944757861-gn0frrsso30fk0mmrsb3k6b8u327u9jc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMbe3Cut_PQkiS8B0E51zI0FxooKvTOvA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hyunjujung.yoil">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Join" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.hyunjujung.yoil.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".YoilMain" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDNsH5VJ40ayZNrSb-yDcIVIUCZuJ_VF64" />
+
+        <activity android:name=".Addarea_googleMap" />
+        <activity android:name=".WriteTimeline" />
+        <activity android:name=".MyInfo" />
+        <activity android:name=".UpdateUser" />
+
+        <!-- FCM ! -->
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.MyFirebaseInstanceIDService">
+            <intent-filte>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filte>
+        </service>
+
+        <activity android:name=".MyFavoriteList" />
+        <activity android:name=".Recomment" />
+        <activity android:name=".FavoriteDetail" />
+        <activity android:name=".UpdateTimeLine" />
+        <activity android:name=".InsertDailyCodi" />
+        <activity
+            android:name="com.zfdang.multiple_images_selector.ImagesSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".UpdateDailyCodi" />
+        <activity android:name=".WeekCodiDetail" />
+        <activity android:name=".chatting.Chatting" />
+        <activity
+            android:name=".chatting.ChattingRoom"
+            android:theme="@style/ChatTheme" />
+        <activity android:name=".SelectFriend" />
+
+        <!-- 채팅 broadcastReceiver 와 service ! -->
+        <service android:name=".chatting.ChatService" />
+
+        <receiver android:name=".chatting.ChatBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ChangeRoomTitle" />
+        <activity android:name=".OtherInfo" />
+        <activity android:name=".MyFollowerList" />
+        <activity android:name=".MyFollowingList" />
+        <activity android:name=".WeatherClothes" />
+        <activity android:name=".ImageFilterSet" />
+        <activity android:name=".ChatAlbum" />
+        <activity android:name=".ChatAlbumSlide"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/followingProfile"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/followingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/followingProfile"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:id="@+id/followingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/followingId"
+        android:layout_toRightOf="@id/followingProfile"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/cancelfollowBtn"
+        android:onClick="clickBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:background="@drawable/btn_stroke_follower"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="팔로잉"/>
+
+</RelativeLayout>

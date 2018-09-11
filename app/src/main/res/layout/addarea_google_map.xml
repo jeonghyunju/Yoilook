@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hyunjujung.yoil.Addarea_googleMap">
+
+    <FrameLayout
+        android:id="@+id/mapframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/googleMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            tools:context="com.example.hyunjujung.yoil.Addarea_googleMap"
+            class="com.google.android.gms.maps.MapFragment"/>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/searchareaEt"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                android:hint="2자 이상 입력하세요"
+                android:ems="12"/>
+            <Button
+                android:id="@+id/search_area"
+                android:onClick="addAreaOk"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:background="@android:drawable/ic_search_category_default" />
+        </LinearLayout>
+
+    </FrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addareaFloat"
+        android:onClick="addAreaOk"
+        app:borderWidth="0dp"
+        android:backgroundTint="#7780AD"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/plus"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

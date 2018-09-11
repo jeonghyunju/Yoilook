@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chatyouProfile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/chatyouId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chatyouProfile"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/chatyouTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chatyouProfile"
+        android:layout_below="@id/chatyouId"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dp"
+        android:padding="7dp"
+        android:text="asdfwefwdfsefawefagwega"
+        android:background="@drawable/btn_stroke_tag"/>
+
+    <ImageView
+        android:id="@+id/chatyouImage"
+        android:layout_width="180dp"
+        android:layout_height="170dp"
+        android:layout_toRightOf="@id/chatyouProfile"
+        android:layout_below="@id/chatyouId"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:background="@drawable/btn_stroke_tag"/>
+    <TextView
+        android:id="@+id/youImageDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chatyouImage"
+        android:layout_alignBottom="@id/chatyouImage"
+        android:layout_marginLeft="5dp"
+        android:textSize="10dp"/>
+
+    <TextView
+        android:id="@+id/chatyoudate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chatyouTv"
+        android:layout_alignBottom="@id/chatyouTv"
+        android:layout_marginLeft="5dp"
+        android:textSize="10dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/chatmeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:padding="7dp"
+        android:layout_marginRight="2dp"
+        android:text="sdfsdfsdfsdfsdfsdfsdsdf"
+        android:textColor="@android:color/white"
+        android:background="@drawable/chatme_round"/>
+
+    <ImageView
+        android:id="@+id/chatmeImage"
+        android:layout_width="180dp"
+        android:layout_height="170dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/chatme_round"/>
+
+    <TextView
+        android:id="@+id/meImageDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/chatmeImage"
+        android:layout_alignBottom="@id/chatmeImage"
+        android:layout_marginRight="5dp"
+        android:textSize="10dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/chatmedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/chatmeTv"
+        android:layout_alignBottom="@id/chatmeTv"
+        android:layout_marginRight="5dp"
+        android:textSize="10dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/addUserTv"
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="egegwrgerhrthrtjtyjtyj"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="#eaeaed"/>
+
+</RelativeLayout>

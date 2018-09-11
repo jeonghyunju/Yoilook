@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/followerProfile"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/followerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/followerProfile"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:id="@+id/followerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/followerId"
+        android:layout_toRightOf="@id/followerProfile"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"/>
+
+    <ImageButton
+        android:id="@+id/deletefollow"
+        android:onClick="clickBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:src="@drawable/morebutton"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/cancelfollowBtn"
+        android:onClick="clickBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:background="@drawable/btn_stroke_follower"
+        android:layout_toLeftOf="@id/deletefollow"
+        android:layout_centerVertical="true"
+        android:text="팔로잉"/>
+
+    <Button
+        android:id="@+id/addfollowBtn"
+        android:onClick="clickBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:background="@drawable/btn_stroke_following"
+        android:layout_toLeftOf="@id/deletefollow"
+        android:layout_centerVertical="true"
+        android:text="팔로우"
+        android:textColor="#fff"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

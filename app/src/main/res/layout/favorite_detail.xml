@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyunjujung.yoil.FavoriteDetail">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <Button
+            android:id="@+id/home"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/home"/>
+        <Button
+            android:id="@+id/favorite"
+            android:onClick="clickMenu"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/clicklike"/>
+        <Button
+            android:id="@+id/addtimeline"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/add"/>
+        <Button
+            android:id="@+id/chatting"
+            android:onClick="clickMenu"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/chat"/>
+        <Button
+            android:id="@+id/myinfo"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/user"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/view2"
+        android:layout_above="@id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"/>
+
+
+    <ScrollView
+        android:layout_above="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/writePro"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:id="@+id/writeId"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/writeImg"
+                android:layout_below="@id/linear"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/writecontent"
+                android:layout_below="@id/writeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_below="@id/writecontent"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/favoriteImg"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:src="@drawable/colorfavorite"/>
+
+                <TextView
+                    android:id="@+id/favoriteTv"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_below="@+id/linear2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/commentImg"
+                    android:onClick="clickComment"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:background="@null"
+                    android:src="@drawable/comment"/>
+
+                <TextView
+                    android:id="@+id/commentTv"
+                    android:onClick="clickComment"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="3dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="3dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/subImage"
+            android:layout_width="185dp"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"/>
+        <ImageButton
+            android:id="@+id/categoryFavorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:layout_alignRight="@id/subImage"
+            android:layout_alignTop="@id/subImage"
+            android:src="@drawable/favorite"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

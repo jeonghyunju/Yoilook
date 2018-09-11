@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hyunjujung.yoil.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:text="YOILOOK"
+        android:textSize="30dp"
+        android:textColor="#7780AD"
+        android:textStyle="bold"/>
+
+    <GridLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:columnCount="1">
+
+        <EditText
+            android:id="@+id/loginId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="ID 를 입력하세요"
+            android:maxLines="1"
+            android:ems="14"/>
+        <TextView
+            android:id="@+id/loginIdcheck"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/loginPw"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Password 를 입력하세요"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:ems="14"/>
+        <TextView
+            android:id="@+id/loginPwcheck"
+            android:layout_gravity="center"/>
+    </GridLayout>
+
+    <CheckBox
+        android:id="@+id/autoLoginchk"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="자동로그인"/>
+
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/loginokBtn"
+        android:onClick="loginandjoin"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_round"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="LOGIN"/>
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/joinBtn"
+        android:onClick="loginandjoin"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_stroke"
+        android:textColor="#7780AD"
+        android:textStyle="bold"
+        android:text="JOIN"/>
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.example.hyunjujung.yoil.Recomment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/writePI"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"/>
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_toRightOf="@id/writePI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="17dp">
+
+        <TextView
+            android:id="@+id/writeIds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="ididid"/>
+        <TextView
+            android:id="@+id/writeCon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@id/writePI"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/commentEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="4"
+            android:layout_gravity="center"
+            android:hint="댓글 달기..."
+            android:textSize="14dp"
+            android:background="@android:color/white"/>
+        <ImageButton
+            android:id="@+id/cancelBtn"
+            android:onClick="clickBtn"
+            android:visibility="invisible"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:src="@drawable/cancel"/>
+        <Button
+            android:id="@+id/commentOkBtn"
+            android:onClick="clickBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="게시"
+            android:textSize="17dp"
+            android:textColor="#2456a5"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/view2"
+        android:layout_above="@id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/commentRecycle"
+        android:layout_below="@id/view1"
+        android:layout_above="@id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

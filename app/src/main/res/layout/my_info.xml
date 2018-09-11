@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyunjujung.yoil.MyInfo">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <Button
+            android:id="@+id/home"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/home"/>
+        <Button
+            android:id="@+id/favorite"
+            android:onClick="clickMenu"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/like"/>
+        <Button
+            android:id="@+id/addtimeline"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/add"/>
+        <Button
+            android:id="@+id/chatting"
+            android:onClick="clickMenu"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/chat"/>
+        <Button
+            android:id="@+id/myinfo"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/clickuser"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_above="@id/linearlayout"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#a4a8ad"/>
+
+    <LinearLayout
+        android:id="@+id/infoLinear"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:gravity="center_horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/infoProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/infoIdTv"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@id/infoLinear"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#a4a8ad"/>
+
+    <Button
+        android:id="@+id/updateUser"
+        android:onClick="clickMenu"
+        android:layout_toRightOf="@id/infoLinear"
+        android:layout_alignBottom="@id/infoLinear"
+        android:layout_above="@id/view2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:text="프로필 수정"
+        android:background="@drawable/btn_stroke_no"/>
+
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/updateUser"
+        android:layout_alignLeft="@id/updateUser">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/followingCount"
+                android:onClick="goFollowingList"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/followerCount"
+                android:onClick="goFollowerList"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/followingTv"
+                android:onClick="goFollowingList"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="팔로잉"
+                android:textSize="12dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+            <TextView
+                android:id="@+id/followerTv"
+                android:onClick="goFollowerList"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="팔로워"
+                android:textSize="12dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageButton
+        android:id="@+id/todayWeather"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/tablelayout"
+        android:layout_above="@id/updateUser"
+        android:src="@drawable/sun"
+        android:background="@null"
+        android:layout_marginLeft="5dp"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_below="@id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.design.widget.TabLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_below="@id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#a4a8ad"/>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_below="@id/view3"
+        android:layout_above="@id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+</RelativeLayout>

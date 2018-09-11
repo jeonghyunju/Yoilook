@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyunjujung.yoil.WeatherClothes">
+
+    <!--<com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/weatherCal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.prolificinteractive.materialcalendarview.MaterialCalendarView>!-->
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <Button
+            android:id="@+id/home"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/home"/>
+        <Button
+            android:id="@+id/favorite"
+            android:onClick="clickMenu"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/like"/>
+        <Button
+            android:id="@+id/addtimeline"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/add"/>
+        <Button
+            android:id="@+id/chatting"
+            android:onClick="clickMenu"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/chat"/>
+        <Button
+            android:id="@+id/myinfo"
+            android:onClick="clickMenu"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/clickuser"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_above="@id/linearlayout"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#a4a8ad"/>
+
+    <TextView
+        android:id="@+id/weatherTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="WEATHER CODI"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/weatherTitle"/>
+
+    <TextView
+        android:id="@+id/todayDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weatherTitle"
+        android:padding="7dp"
+        android:textSize="12dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/todayDateTv"
+        android:layout_above="@id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/time_weather_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/time_weather_recycle"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/weather_area_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/weather_maxTemp_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:textSize="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:layout_toLeftOf="@id/weather_maxTemp_Tv"
+                android:layout_marginRight="7dp"
+                android:text="최고 기온"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/weather_minTemp_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weather_maxTemp_Tv"
+                android:textSize="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weather_maxTemp_Tv"
+                android:layout_toLeftOf="@id/weather_minTemp_Tv"
+                android:layout_marginRight="7dp"
+                android:text="최저 기온"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/weather_nowTemp_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weather_area_Tv"
+                android:padding="3dp"
+                android:textSize="17dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/weather_sky_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weather_area_Tv"
+                android:layout_toLeftOf="@id/weather_nowTemp_Tv"
+                android:layout_alignBaseline="@id/weather_nowTemp_Tv"
+                android:padding="3dp"
+                android:textSize="13dp"/>
+
+            <ImageView
+                android:id="@+id/weather_codi_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weather_nowTemp_Tv"
+                android:padding="15dp"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/weather_codi_imageview"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/weather_codi_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view4"
+                android:gravity="center"
+                android:padding="5dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/weather_cloth_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weather_codi_comment"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
